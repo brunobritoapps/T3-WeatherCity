@@ -1,0 +1,32 @@
+<!--CONTAINER MAIN-->
+<div class="container p-4">
+  <div class="row">
+    <!--BOX 1 SEARCH-->
+    <div class="box col-md-6 offset-md-3">
+      <div class="card card-body">
+        <h1 class="h4 text-center">(T3) Weather in my city</h1>
+        <img width="150" alt="Bravi Logo" src="http://i.imgur.com/mS40Thh.png" class="mx-auto">
+        <form (submit)="submitLocation(cityName, cityCode)">
+          <input type="text" placeholder="City" class="form-control" autofocus #cityName>
+          <input type="text" placeholder="Zip code ex:br " class="form-control" #cityCode>
+          <button class="btn btn-primary btn-block mt-2">Search</button>
+        </form>
+      </div>
+    </div>
+    <!--END BOX 1 SEARCH-->
+    <!--BOX 2 RESULT-->
+    <div class="box col-md-6 offset-md-3">
+      <div *ngIf="weather" class="card card-body text-center">
+        <h1 class="h4">Weather</h1>
+        <p><b>City:</b> {{weather.name}}</p>
+        <p><b>Latitude:</b> {{weather.coord.lat}}</p>
+        <p><b>Longitude:</b> {{weather.coord.lon}}</p>
+        <p><b>Humidity:</b> {{weather.main.humidity}}</p>
+        <p><b>Pressure:</b> {{weather.main.pressure}}</p>
+        <p><b>Temperature:</b> {{weather.main.temp}} °C</p>
+        <p><b>Description:</b> {{weather.weather[0].description }}</p>
+      </div>
+    </div>
+    <!--END BOX 2 RESULT-->
+  </div>
+</div>
