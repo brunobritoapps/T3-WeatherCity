@@ -7,7 +7,7 @@ This project was generated with [Angular CLI] version 7.3.3.
 ## API access key
 This project uses an api (https://home.openweathermap.org) and requires a key to access the api services. To do this, create an account and generate a password.
 
-![](doc/view-apikey.png)
+![](doc/view_apikey.png)
 
 ## Download dependencies
 
