@@ -11,6 +11,7 @@ This project uses an api (https://home.openweathermap.org) and requires a key to
 
 To insert a key access to the weather.service.ts file on the path src / app / services as shown below
 
+```
 export class WeatherService {
   //INSERT THE ACCESS KEY HERE
   apiKey: string = '4ec266856c3d2555180f6c1fe66f791e';
@@ -24,6 +25,7 @@ export class WeatherService {
     return this.http.get(`${this.URI}${cityName},${countryCode}`);
   }
 }
+```
 
 ## Download dependencies
 
